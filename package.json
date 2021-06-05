@@ -1,0 +1,22 @@
+{
+  "name": "shopify-server",
+  "version": "1.0.0",
+  "description": "server of shopify-app",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "express",
+    "server",
+    "shopify"
+  ],
+  "author": "surya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
