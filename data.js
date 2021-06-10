@@ -17,7 +17,6 @@ const data = {
     ],
     products: [
         {
-            _id: '1',
             category: 'Shirts',
             name: 'Nike Slim Shirt',
             image: '/images/p1.jpg',
@@ -29,7 +28,6 @@ const data = {
             description: 'Slim fit. The model (height 6) is wearing a size 40',
         },
         {
-            _id: '2',
             category: 'Shirts',
             name: 'Adidas Slim Shirt',
             image: '/images/p2.jpg',
@@ -41,7 +39,6 @@ const data = {
             description: 'Slim fit. The model (height 6) is wearing a size 40',
         },
         {
-            _id: '3',
             category: 'Shirts',
             name: 'Lacoste Slim Shirt',
             image: '/images/p3.jpg',
@@ -53,7 +50,6 @@ const data = {
             description: 'Slim fit. The model (height 6) is wearing a size 40',
         },
         {
-            _id: '4',
             category: 'Pants',
             name: 'Nike Slim Pant',
             image: '/images/p4.jpg',
@@ -65,7 +61,6 @@ const data = {
             description: 'Slim fit. The model (height 6) is wearing a size 42',
         },
         {
-            _id: '5',
             category: 'Pants',
             name: 'Puma Slim Pant',
             image: '/images/p5.jpg',
@@ -77,7 +72,6 @@ const data = {
             description: 'Slim fit. The model (height 6) is wearing a size 40',
         },
         {
-            _id: '6',
             category: 'Pants',
             name: 'Adidas Fit Pant',
             image: '/images/p6.jpg',
