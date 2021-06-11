@@ -2,3 +2,9 @@
 
 # dependencies
 /node_modules
+
+# file itself
+.gitignore
+
+# environment keys
+.env

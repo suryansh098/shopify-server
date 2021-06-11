@@ -1,9 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const { productRouter } = require('./routers/productRouter.js');
 const { userRouter } = require('./routers/userRouter.js');
 
+dotenv.config();
+
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/shopify', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
