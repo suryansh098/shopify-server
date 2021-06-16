@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const { productRouter } = require('./routers/productRouter.js');
 const { userRouter } = require('./routers/userRouter.js');
+const { orderRouter } = require('./routers/orderRouter.js');
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/shopify', {
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
+app.use('/api/orders', orderRouter);
 
 app.get('/', (req, res) => {
     res.send("Server is working");
