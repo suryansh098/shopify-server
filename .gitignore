@@ -8,3 +8,4 @@
 
 # environment keys
 .env
+/uploads/*.jpg
