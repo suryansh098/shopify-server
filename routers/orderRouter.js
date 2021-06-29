@@ -1,9 +1,19 @@
 const express = require('express');
 const expressAsyncHandler = require('express-async-handler');
 const { Order } = require('../models/orderModel.js');
-const { isAuth } = require('../utils.js');
+const { isAuth, isAdmin } = require('../utils.js');
 
 const orderRouter = express.Router();
+
+orderRouter.get(
+  '/',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find({}).populate('user', 'name');
+    res.send(orders);
+  })
+)
 
 orderRouter.get(
   '/list',
