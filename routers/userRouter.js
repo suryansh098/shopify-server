@@ -3,7 +3,7 @@ const expressAsyncHandler = require('express-async-handler');
 const bcrypt = require('bcryptjs');
 const { User } = require('../models/userModel.js');
 const { data } = require('../data.js');
-const { isAuth, generateToken } = require('../utils.js');
+const { isAuth, generateToken, isAdmin } = require('../utils.js');
 
 const userRouter = express.Router();
 
@@ -91,6 +91,16 @@ userRouter.put(
         token: generateToken(updatedUser)
       })
     }
+  })
+);
+
+userRouter.get(
+  '/',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const users = await User.find({});
+    res.send(users);
   })
 );
 
